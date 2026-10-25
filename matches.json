@@ -1,0 +1,331 @@
+[
+
+{
+    "id": "20260807-reds",
+    "title": "ガンバ大阪 vs 浦和レッズ",
+    "competition": "J1リーグ 第1節",
+    "start": "2026-08-07T19:30:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=g8XD26eGChE",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=uypUvAS6fvs"},
+    "result": "W 4-3"
+},
+
+{
+    "id": "20260811-gangwon",
+    "title": "江原FC vs ガンバ大阪",
+    "competition": "ACLEプレーオフ",
+    "start": "2026-08-11T19:30:00+09:00",
+    "location": "韓国・江陵総合競技場",
+    "youtube": {"AFC公式": "https://www.youtube.com/watch?v=Tlzc5xKitHQ"},
+    "result": "W 1-0"
+},
+
+{
+    "id": "20260815-hollyhock",
+    "title": "水戸ホーリーホック vs ガンバ大阪",
+    "competition": "J1リーグ 第2節",
+    "start": "2026-08-15T18:00:00+09:00",
+    "location": "水戸信用金庫スタジアム",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=-8iqxzQxSsQ",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=azAJnhII09c"},
+    "result": "D 1-1"
+},
+
+{
+    "id": "20260822-grampus",
+    "title": "名古屋グランパス vs ガンバ大阪",
+    "competition": "J1リーグ 第3節",
+    "start": "2026-08-22T19:00:00+09:00",
+    "location": "豊田スタジアム",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=ssjEfgWv8Lw",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=EsXd3qFTtoo"},
+    "result": "L 1-3"
+},
+
+{
+    "id": "20260826-reilac",
+    "title": "ガンバ大阪 vs レイラック滋賀FC",
+    "competition": "天皇杯 2回戦",
+    "start": "2026-08-26T19:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {"ガンバ公式": "aaaaaaaaaa",
+                "スカパー公式": "https://www.youtube.com/watch?v=1E4h7ReIybs"},
+    "result": "W 2-0"
+},
+
+{
+    "id": "20260829-sanfrecce",
+    "title": "ガンバ大阪 vs サンフレッチェ広島",
+    "competition": "J1リーグ 第4節",
+    "start": "2026-08-29T18:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=AKH9s0IOAtU",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=b_10uDVSItY"},
+    "result": "D 0-0"
+},
+
+{
+    "id": "20260902-vvaren",
+    "title": "V・ファーレン長崎 vs ガンバ大阪",
+    "competition": "J1リーグ 第5節",
+    "start": "2026-09-02T19:00:00+09:00",
+    "location": "PEACE STADIUM Connected by SoftBank",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=o9jP_R_ZFJ4",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=2UXhz3n0jR8"},
+    "result": "D 2-2"
+},
+
+{
+    "id": "20260906-jefunited",
+    "title": "ジェフユナイテッド千葉 vs ガンバ大阪",
+    "competition": "J1リーグ 第6節",
+    "start": "2026-09-06T18:00:00+09:00",
+    "location": "フクダ電子アリーナ",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=kCpGnaV38JM",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=tK_HmICBgJs"},
+    "result": "L 0-2"
+},
+
+{
+    "id": "20260912-fctokyo",
+    "title": "ガンバ大阪 vs FC東京",
+    "competition": "J1リーグ 第7節",
+    "start": "2026-09-12T19:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=IbE9-Jy4eMU",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=TK_2GMT8Wdk"},
+    "result": "L 0-2"
+},
+
+{
+    "id": "20260915-conganhanoi",
+    "title": "ガンバ大阪 vs コンアン・ハノイ",
+    "competition": "ACLE 第1節",
+    "start": "2026-09-15T19:00:00+09:00",
+    "location": "吹田サッカースタジアム",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=Qvhvy5WjpYs",
+                "AFC公式": "https://www.youtube.com/watch?v=ZBOkohwqSuw"},
+    "result": "W 4-1"
+},
+
+{
+    "id": "20260920-vissel",
+    "title": "ガンバ大阪 vs ヴィッセル神戸",
+    "competition": "J1リーグ 第8節",
+    "start": "2026-09-20T17:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=I5RN2ydFeXA",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=QAoWlx3whFY"},
+    "result": "L 0-1"
+},
+
+{
+    "id": "20260923-vortis",
+    "title": "ガンバ大阪 vs 徳島ヴォルティス",
+    "competition": "天皇杯 3回戦",
+    "start": "2026-09-23T17:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=XFWdpbsBh60",
+                "スカパー公式": "https://www.youtube.com/watch?v=TB-qLRHPWPI"},
+    "result": "W 5-0"
+},
+
+{
+    "id": "20261003-reysol",
+    "title": "柏レイソル vs ガンバ大阪",
+    "competition": "Jリーグ杯 1stラウンド 4回戦",
+    "start": "2026-10-03T19:00:00+09:00",
+    "location": "三協フロンテア柏スタジアム",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=YQ0yyAddENg",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=_a8JZxx3vfs",
+                "スカパー公式": "https://www.youtube.com/watch?v=Qpw-t_3TeGs"},
+    "result": "L 4-5"
+},
+
+{
+    "id": "20261009-antlers",
+    "title": "鹿島アントラーズ vs ガンバ大阪",
+    "competition": "J1リーグ 第9節",
+    "start": "2026-10-09T19:00:00+09:00",
+    "location": "メルカリスタジアム",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=gfRcuSIepbY",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=VvrwdiDF81E"},
+    "result": "L 0-2"
+},
+
+{
+    "id": "20261013-newcastle",
+    "title": "ニューカッスル・ジェッツ vs ガンバ大阪",
+    "competition": "ACLE 第2節",
+    "start": "2026-10-13T16:45:00+09:00",
+    "location": "オーストラリア・ニューカッスル国際スポーツセンター",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=0unf8Awpj8w",
+                "AFC公式": "https://www.youtube.com/watch?v=pb_8CjINXGg"},
+    "result": "W 3-1"
+},
+
+{
+    "id": "20261017-spulse",
+    "title": "清水エスパルス vs ガンバ大阪",
+    "competition": "J1リーグ 第10節",
+    "start": "2026-10-17T13:00:00+09:00",
+    "location": "IAIスタジアム日本平",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=ThSt5n8qJVc",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=6i_9mUGVUFE"},
+    "result": "D 2-2"
+},
+
+{
+    "id": "20261021-avispa",
+    "title": "アビスパ福岡 vs ガンバ大阪",
+    "competition": "J1リーグ 第11節",
+    "start": "2026-10-21T19:00:00+09:00",
+    "location": "ベスト電器スタジアム",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=KNGfCYD-rBs",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=DuYmBEq0RQY"},
+    "result": "W 2-1"
+},
+
+{
+    "id": "20261024-sanga",
+    "title": "ガンバ大阪 vs 京都サンガ",
+    "competition": "J1リーグ 第12節",
+    "start": "2026-10-24T16:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=N3OfHA2mPZI",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=wGPDTQGculc"},
+    "result": "D 2-2"
+},
+
+{
+    "id": "20261028-buriram",
+    "title": "ガンバ大阪 vs ブリーラム・ユナイテッド",
+    "competition": "ACLE 第3節",
+    "start": "2026-10-28T19:00:00+09:00",
+    "location": "吹田サッカースタジアム",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20261101-zelvia",
+    "title": "FC町田ゼルビア vs ガンバ大阪",
+    "competition": "J1リーグ 第13節",
+    "start": "2026-11-01T16:00:00+09:00",
+    "location": "町田GIONスタジアム",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20261104-pohang",
+    "title": "浦項スティーラース vs ガンバ大阪",
+    "competition": "ACLE 第4節",
+    "start": "2026-11-04T19:00:00+09:00",
+    "location": "韓国・浦項スティールヤード",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20261108-cerezo",
+    "title": "ガンバ大阪 vs セレッソ大阪",
+    "competition": "J1リーグ 第14節",
+    "start": "2026-11-08T15:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20261121-fagiano",
+    "title": "ガンバ大阪 vs ファジアーノ岡山",
+    "competition": "J1リーグ 第15節",
+    "start": "2026-11-21T16:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20261125-port",
+    "title": "ガンバ大阪 vs ポートFC",
+    "competition": "ACLE 第5節",
+    "start": "2026-11-25T19:00:00+09:00",
+    "location": "吹田サッカースタジアム",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20261129-frontale",
+    "title": "川崎フロンターレ vs ガンバ大阪",
+    "competition": "J1リーグ 第17節",
+    "start": "2026-11-29T15:00:00+09:00",
+    "location": "Uvanceとどろきスタジアム by Fujitsu",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20261202-jeonbuk",
+    "title": "全北現代モータース vs ガンバ大阪",
+    "competition": "ACLE 第6節",
+    "start": "2026-12-02T19:00:00+09:00",
+    "location": "韓国・全州ワールドカップ競技場",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20261206-marinos",
+    "title": "ガンバ大阪 vs 横浜F・マリノス",
+    "competition": "J1リーグ 第18節",
+    "start": "2026-12-06T15:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20261209-reds",
+    "title": "ガンバ大阪 vs 浦和レッズ",
+    "competition": "天皇杯 ラウンド16",
+    "start": "2026-12-09T18:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20261212-verdy",
+    "title": "ガンバ大阪 vs 東京ヴェルディ",
+    "competition": "J1リーグ 第19節",
+    "start": "2026-12-12T16:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20261216-reysol",
+    "title": "ガンバ大阪 vs 柏レイソル",
+    "competition": "J1リーグ 第16節",
+    "start": "2026-12-16T19:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20261219-zelvia",
+    "title": "ガンバ大阪 vs FC町田ゼルビア",
+    "competition": "J1リーグ 第20節",
+    "start": "2026-12-19T16:00:00+09:00",
+    "location": "パナソニックスタジアム吹田",
+    "youtube": {},
+    "result": ""
+}
+
+]
