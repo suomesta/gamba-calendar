@@ -97,11 +97,14 @@ def render_match(match):
         "ics": f"ics/{match['id']}.ics"
     }))
 
+    result = ""
+    if match["result"]:
+        result = ", " + match["result"]
     return f"""
 <div class="match {css}"
 onclick='showMatch({payload})'>
 <strong>{opponent}</strong><br>
-{parse_dt(match["start"]).strftime("%H:%M")}
+{parse_dt(match["start"]).strftime("%H:%M")}{result}
 <span class="match-info">{competition}</span>
 </div>
 """
@@ -560,6 +563,52 @@ function nextMonth(){
         updateView();
     }
 }
+
+document.addEventListener("keydown", event => {
+    if (!window.matchMedia("(min-width: 769px)").matches
+        || event.altKey || event.ctrlKey || event.metaKey
+        || event.target instanceof Element
+            && event.target.closest("input, textarea, select, [contenteditable='true']")
+        || document.getElementById("modal").style.display === "block") {
+        return;
+    }
+
+    if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        prevMonth();
+    } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        nextMonth();
+    }
+});
+
+let wheelNavigationLocked = false;
+let wheelNavigationTimeout;
+
+document.addEventListener("wheel", event => {
+    if (!window.matchMedia("(min-width: 769px)").matches
+        || !event.deltaY
+        || !(event.target instanceof Element)
+        || !event.target.closest(".month.active")) {
+        return;
+    }
+
+    event.preventDefault();
+
+    if (!wheelNavigationLocked) {
+        wheelNavigationLocked = true;
+        if (event.deltaY > 0) {
+            nextMonth();
+        } else {
+            prevMonth();
+        }
+    }
+
+    clearTimeout(wheelNavigationTimeout);
+    wheelNavigationTimeout = setTimeout(() => {
+        wheelNavigationLocked = false;
+    }, 200);
+}, {passive: false});
 
 let touchStartX = null;
 let touchStartY = null;
