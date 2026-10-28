@@ -204,7 +204,8 @@
     "competition": "ACLE 第3節",
     "start": "2026-10-28T19:00:00+09:00",
     "location": "吹田サッカースタジアム",
-    "youtube": {},
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=xtjGWRqJSnU",
+                "AFC公式": "https://www.youtube.com/watch?v=MF8oR-FYNz0"},
     "result": "D 1-1"
 },
 
