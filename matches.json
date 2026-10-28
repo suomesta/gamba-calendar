@@ -205,7 +205,7 @@
     "start": "2026-10-28T19:00:00+09:00",
     "location": "吹田サッカースタジアム",
     "youtube": {},
-    "result": ""
+    "result": "D 1-1"
 },
 
 {
@@ -324,6 +324,16 @@
     "competition": "J1リーグ 第20節",
     "start": "2026-12-19T16:00:00+09:00",
     "location": "パナソニックスタジアム吹田",
+    "youtube": {},
+    "result": ""
+},
+
+{
+    "id": "20270209-ratchaburi",
+    "title": "ラーチャブリーFC vs ガンバ大阪",
+    "competition": "ACLE 第7節",
+    "start": "2027-02-09T21:15:00+09:00",
+    "location": "タイ・ラーチャブリースタジアム",
     "youtube": {},
     "result": ""
 }
