@@ -1,11 +1,13 @@
 import calendar
 import html
 import json
+import shutil
 import urllib.parse
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 OUTPUT_DIR = Path("output")
+ICON_DIR = Path("icons")
 ICS_DIR = OUTPUT_DIR / "ics"
 
 OUTPUT_DIR.mkdir(exist_ok=True)
@@ -128,6 +130,11 @@ def create_html(matches):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/favicon-512.png">
+<link rel="apple-touch-icon" href="icons/favicon-192.png">
 
 <title>ガンバ大阪カレンダー</title>
 
@@ -779,6 +786,7 @@ def main():
         create_ics(m)
 
     create_html(matches)
+    shutil.copytree(ICON_DIR, OUTPUT_DIR / "icons", dirs_exist_ok=True)
 
     print("generated")
 
