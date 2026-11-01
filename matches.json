@@ -215,8 +215,9 @@
     "competition": "J1リーグ 第13節",
     "start": "2026-11-01T16:00:00+09:00",
     "location": "町田GIONスタジアム",
-    "youtube": {},
-    "result": ""
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=QoRbDy_lfXM",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=Pzqb_CH-FJ0"},
+    "result": "D 0-0"
 },
 
 {
