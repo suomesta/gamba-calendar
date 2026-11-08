@@ -254,8 +254,10 @@
     "competition": "J1リーグ 第14節",
     "start": "2026-11-08T15:00:00+09:00",
     "location": "パナソニックスタジアム吹田",
-    "youtube": {},
-    "result": ""
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=OTKe8t0tIH4",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=0FnGyVOktEg",
+                "DAZN": "https://www.youtube.com/watch?v=WaPret_RSMg"},
+    "result": "L 2-3"
 },
 
 {
