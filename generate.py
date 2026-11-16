@@ -211,6 +211,68 @@ th.sat{
     display:none;
 }
 
+table.monday-layout,
+.mobile-columns.monday-layout{
+    display:none;
+}
+
+body.monday-start table.sunday-layout{
+    display:none;
+}
+
+body.monday-start table.monday-layout{
+    display:table;
+}
+
+.layout-toggle{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    cursor:pointer;
+}
+
+#layout-toggle{
+    position:absolute;
+    width:1px;
+    height:1px;
+    opacity:0;
+}
+
+.toggle-switch{
+    position:relative;
+    width:42px;
+    height:24px;
+    border-radius:12px;
+    background:#777;
+    transition:background .2s;
+}
+
+.toggle-switch::after{
+    position:absolute;
+    top:3px;
+    left:3px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:white;
+    content:"";
+    transition:transform .2s;
+}
+
+#layout-toggle:checked + .toggle-switch{
+    background:#004e98;
+}
+
+#layout-toggle:checked + .toggle-switch::after{
+    transform:translateX(18px);
+}
+
+#layout-toggle:focus-visible + .toggle-switch{
+    outline:2px solid #222;
+    outline-offset:2px;
+}
+
 .home{
     background:#004e98;
     color:white;
@@ -222,6 +284,9 @@ th.sat{
 }
 
 .legend{
+    display:flex;
+    align-items:center;
+    gap:10px;
     margin-bottom:10px;
 }
 
@@ -231,7 +296,6 @@ th.sat{
     border-radius:4px;
     font-size:12px;
     color:white;
-    margin-right:10px;
 }
 
 .legend-home{
@@ -290,7 +354,19 @@ th.sat{
         display:none;
     }
 
+    body.monday-start .month table.monday-layout{
+        display:none;
+    }
+
     .mobile-columns{
+        display:block;
+    }
+
+    body.monday-start .mobile-columns.sunday-layout{
+        display:none;
+    }
+
+    body.monday-start .mobile-columns.monday-layout{
         display:block;
     }
 
@@ -298,6 +374,10 @@ th.sat{
         display:grid;
         grid-template-columns:repeat(3, minmax(0, 1fr));
         gap:6px;
+    }
+
+    .monday-layout .mobile-week{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
     }
 
     .mobile-week{
@@ -383,8 +463,6 @@ th.sat{
 
 """
 
-    cal = calendar.Calendar(firstweekday=6)
-
     for idx, ((year, month), month_matches) in enumerate(sorted_months):
 
         match_map = {}
@@ -399,86 +477,92 @@ th.sat{
         html_text += f"""
 <div class="month" data-index="{idx}" data-title="{year}年{month}月"
  data-year="{year}" data-month="{month}">
-
-<table>
-<tr>
-<th class="sun">日</th>
-<th>月</th>
-<th>火</th>
-<th>水</th>
-<th>木</th>
-<th>金</th>
-<th class="sat">土</th>
-</tr>
 """
 
-        for week in cal.monthdayscalendar(year, month):
+        for firstweekday, layout_class in (
+            (6, "sunday-layout"),
+            (0, "monday-layout")
+        ):
+            cal = calendar.Calendar(firstweekday=firstweekday)
+            html_text += f'<table class="{layout_class}"><tr>'
 
-            html_text += "<tr>"
-
-            for day in week:
-
-                if day == 0:
-                    html_text += "<td></td>"
-                    continue
-
-                date_value = f"{year:04d}-{month:02d}-{day:02d}"
-
-                day_matches = match_map.get(day, [])
-                cell_classes = []
-                if day_matches:
-                    cell_classes.append("has-matches")
-                cell_class = " ".join(cell_classes)
-
-                html_text += \
-                    f'<td class="{cell_class}" data-date="{date_value}">' \
-                    f'<div class="day">{day}</div>'
-
-                for m in day_matches:
-                    html_text += render_match(m)
-
-                html_text += "</td>"
+            for weekday_offset in range(7):
+                weekday = (firstweekday + weekday_offset) % 7
+                day_class = " class=\"sun\"" if weekday == 6 else (
+                    " class=\"sat\"" if weekday == 5 else ""
+                )
+                html_text += (
+                    f"<th{day_class}>{weekday_names[weekday]}</th>"
+                )
 
             html_text += "</tr>"
 
-        html_text += "</table>"
+            for week in cal.monthdayscalendar(year, month):
+                html_text += "<tr>"
 
-        html_text += '<div class="mobile-columns">'
+                for day in week:
+                    if day == 0:
+                        html_text += "<td></td>"
+                        continue
 
-        for week in cal.monthdayscalendar(year, month):
-            week_cells = [[], [], []]
-            for weekday_index, day in enumerate(week):
-                if day == 0 or day not in match_map:
-                    continue
+                    date_value = f"{year:04d}-{month:02d}-{day:02d}"
+                    day_matches = match_map.get(day, [])
+                    cell_class = "has-matches" if day_matches else ""
 
-                column_index = 0 if weekday_index == 0 else (
-                    1 if weekday_index <= 4 else 2
-                )
-                weekday = calendar.weekday(year, month, day)
-                weekday_class = "saturday" if weekday == 5 else (
-                    "sunday" if weekday == 6 else ""
-                )
-                date_label = (
-                    f'<div class="mobile-date">{month:02d}月{day:02d}日'
-                    f'(<span class="{weekday_class}">'
-                    f'{weekday_names[weekday]}</span>)</div>'
-                )
-                match_cards = "".join(
-                    render_match(match) for match in match_map[day]
-                )
-                week_cells[column_index].append(
-                    f'<div class="mobile-match-day" data-date="{year:04d}-'
-                    f'{month:02d}-{day:02d}">{date_label}{match_cards}</div>'
-                )
+                    html_text += \
+                        f'<td class="{cell_class}" data-date="{date_value}">' \
+                        f'<div class="day">{day}</div>'
 
-            html_text += '<div class="mobile-week">'
-            for cell_days in week_cells:
-                html_text += '<div class="mobile-week-cell">'
-                html_text += "".join(cell_days)
+                    for m in day_matches:
+                        html_text += render_match(m)
+
+                    html_text += "</td>"
+
+                html_text += "</tr>"
+
+            html_text += "</table>"
+
+        for firstweekday, layout_class, column_for_weekday in (
+            (6, "sunday-layout", {6: 0, 0: 1, 1: 1, 2: 1, 3: 1, 4: 2, 5: 2}),
+            (0, "monday-layout", {0: 0, 1: 0, 2: 0, 3: 0, 4: 1, 5: 1, 6: 1})
+        ):
+            cal = calendar.Calendar(firstweekday=firstweekday)
+            html_text += f'<div class="mobile-columns {layout_class}">'
+
+            for week in cal.monthdayscalendar(year, month):
+                column_count = max(column_for_weekday.values()) + 1
+                week_cells = [[] for _ in range(column_count)]
+                for day in week:
+                    if day == 0 or day not in match_map:
+                        continue
+
+                    weekday = calendar.weekday(year, month, day)
+                    weekday_class = "saturday" if weekday == 5 else (
+                        "sunday" if weekday == 6 else ""
+                    )
+                    date_label = (
+                        f'<div class="mobile-date">{month:02d}月{day:02d}日'
+                        f'(<span class="{weekday_class}">'
+                        f'{weekday_names[weekday]}</span>)</div>'
+                    )
+                    match_cards = "".join(
+                        render_match(match) for match in match_map[day]
+                    )
+                    week_cells[column_for_weekday[weekday]].append(
+                        f'<div class="mobile-match-day" data-date="{year:04d}-'
+                        f'{month:02d}-{day:02d}">{date_label}{match_cards}</div>'
+                    )
+
+                html_text += '<div class="mobile-week">'
+                for cell_days in week_cells:
+                    html_text += '<div class="mobile-week-cell">'
+                    html_text += "".join(cell_days)
+                    html_text += "</div>"
                 html_text += "</div>"
+
             html_text += "</div>"
 
-        html_text += "</div></div>"
+        html_text += "</div>"
 
     html_text += """
 <div id="modal" class="modal">
@@ -501,6 +585,11 @@ onclick="closeModal()">×</button>
 <span class="legend-item legend-away">
 アウェー
 </span>
+<label class="layout-toggle">
+<span>月曜始まり</span>
+<input id="layout-toggle" type="checkbox" aria-label="月曜始まりのレイアウトに切り替え">
+<span class="toggle-switch" aria-hidden="true"></span>
+</label>
 </div>
 
 <script>
@@ -512,6 +601,23 @@ const months =
 
 const title =
  document.getElementById("month-title");
+
+const layoutToggle = document.getElementById("layout-toggle");
+const mondayStartStorageKey = "gambaCalendarMondayStart";
+const mondayStart = localStorage.getItem(mondayStartStorageKey) === "true";
+
+document.body.classList.toggle("monday-start", mondayStart);
+layoutToggle.checked = mondayStart;
+layoutToggle.addEventListener("change", () => {
+    document.body.classList.toggle(
+        "monday-start",
+        layoutToggle.checked
+    );
+    localStorage.setItem(
+        mondayStartStorageKey,
+        String(layoutToggle.checked)
+    );
+});
 
 function updateView(){
     months.forEach(
