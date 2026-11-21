@@ -266,8 +266,10 @@
     "competition": "J1リーグ 第15節",
     "start": "2026-11-21T16:00:00+09:00",
     "location": "パナソニックスタジアム吹田",
-    "youtube": {},
-    "result": ""
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=rjo4qbzDuJ0",
+                "Jリーグ公式": "https://www.youtube.com/watch?v=sdrrPLetHSs",
+                "DAZN": "https://www.youtube.com/watch?v=wu5x1-68deY"},
+    "result": "L 0-1"
 },
 
 {
