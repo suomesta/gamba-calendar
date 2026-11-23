@@ -106,7 +106,7 @@ def render_match(match):
 <div class="match {css}"
 onclick='showMatch({payload})'>
 <strong>{opponent}</strong><br>
-{parse_dt(match["start"]).strftime("%H:%M")}{result}
+{parse_dt(match["start"]).strftime("%H:%M")}
 <span class="match-info">{competition}</span>
 </div>
 """
