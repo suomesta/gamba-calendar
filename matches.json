@@ -278,8 +278,10 @@
     "competition": "ACLE 第5節",
     "start": "2026-11-25T19:00:00+09:00",
     "location": "吹田サッカースタジアム",
-    "youtube": {},
-    "result": ""
+    "youtube": {"ガンバ公式": "https://www.youtube.com/watch?v=vAsNMUpOoX4",
+                "AFC公式": "https://www.youtube.com/watch?v=nC533KA85ZE",
+                "DAZN": "https://www.youtube.com/watch?v=rx7tGyD8iLI"},
+    "result": "W 2-0"
 },
 
 {
